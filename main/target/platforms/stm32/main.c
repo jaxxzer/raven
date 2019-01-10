@@ -9,6 +9,7 @@ void assert(int c)
 
 int main(void)
 {
+    hal_gpio_setup(HAL_PC(13), HAL_GPIO_DIR_OUTPUT, HAL_GPIO_PULL_NONE);
     hal_gpio_set_level(HAL_PC(13), HAL_GPIO_LOW);
     app_main();
     vTaskStartScheduler();
